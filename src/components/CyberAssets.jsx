@@ -19,6 +19,26 @@ export const CrosshairTarget = ({ className = "", size = 40 }) => (
   </svg>
 );
 
+export const Gundam = ({ className = "", size = 60 }) => (
+  <img 
+    src="/cybercore_gundam.png" 
+    alt="Icon" 
+    width={size} 
+    height={size} 
+    className={`object-contain ${className}`} 
+  />
+);
+
+export const Angel = ({ className = "", size = 60 }) => (
+  <img 
+    src="/cybercore_angel.png" 
+    alt="Icon" 
+    width={size} 
+    height={size} 
+    className={`object-contain ${className}`} 
+  />
+);
+
 export const Random_Asset = ({ className = "", size = 60 }) => (
   <img 
     src="/random_vector.png" 
@@ -40,7 +60,7 @@ export const Rubic = ({ className = "", size = 60 }) => (
 
 export const GeometricBurst = ({ className = "", size = 60 }) => (
   <img 
-    src="/cybercore_globe.png" 
+    src="/globe_vhs.png" 
     alt="Icon" 
     width={size} 
     height={size} 

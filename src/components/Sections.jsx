@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight, FileText, ExternalLink, Download, Maximize2 } from 'lucide-react';
-import { HazardStripes, CrosshairTarget, GeometricBurst, WireGridBox, GlitchText, GithubIcon, LinkedinIcon, Rubic, Random_Asset } from './CyberAssets';
+import { HazardStripes, CrosshairTarget, GeometricBurst, WireGridBox, GlitchText, GithubIcon, LinkedinIcon, Rubic, Random_Asset, Gundam, Angel } from './CyberAssets';
 import { InteractiveCard } from './InteractiveCard';
 import { PROJECTS, SKILLS, EXPERIENCE } from '../data/portfolio';
 
@@ -19,7 +19,7 @@ const SectionHeader = ({ title, code }) => (
 
 const Y2KBarcode = () => (
   <div className="flex flex-col items-center mb-10 border-4 border-[#081B3A] p-2 bg-white shadow-[6px_6px_0px_#2E6DFF] relative">
-    <div className="absolute -left-7 -top-8 opacity-70 hidden md:block"><Random_Asset size={30} /></div>
+    
     <div className="flex items-end h-16 gap-[2px]">
        {[3,1,4,2,6,1,2,5,1,3,2,8,1,2,4,1,3,2,1,5,2].map((w, i) => (
          <div key={i} className="bg-[#081B3A]" style={{ width: `${w}px`, height: i % 4 === 0 ? '60px' : '45px' }} />
@@ -34,17 +34,18 @@ const Y2KBarcode = () => (
 export const Hero = () => (
   <section className="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden">
     <HazardStripes className="absolute top-0 left-0" />
+    <div className="absolute -left-150 top-10 opacity-70 hidden md:block"><Gundam size={1000} /></div>
     <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center">
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: "linear" }}>
         <Y2KBarcode />
       </motion.div>
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2, ease: "linear" }}>
         <h1 className="font-display text-5xl md:text-8xl font-bold tracking-tighter mb-4 uppercase">
-          <GlitchText text="Satvik Bagul" />
+          <GlitchText text="Satvik_Bagul" />
         </h1>
         <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base text-[#081B3A] mb-8 font-bold">
-          <span className="px-3 py-1 border-2 border-[#081B3A] bg-[#E2E8F0] flex items-center gap-2"> Computer Science</span>
-          <span className="px-3 py-1 border-2 border-[#081B3A] bg-[#E2E8F0]">Statistics</span>
+          <span className="px-3 py-1 border-2 border-[#081B3A] bg-[#E2E8F0] flex items-center gap-2"> Computer_Science</span>
+          <span className="px-3 py-1 border-2 border-[#081B3A] bg-[#E2E8F0]">Statistics_&_Data_Science</span>
           <span className="px-3 py-1 border-2 border-[#081B3A] bg-[#E2E8F0] ">Business</span>
           <span className="px-3 py-1 border-2 border-[#081B3A] bg-[#E2E8F0]">@UMass_Amherst</span>
         </div>
@@ -70,10 +71,10 @@ export const Hero = () => (
 
 export const About = () => (
   <section id="about" className="py-20 relative z-10">
-    <div className="container mx-auto px-6">
+    <div className="container mx-auto px-6"> 
       <SectionHeader title="Intelligence Dossier" code="SYS.READ(ABOUT)" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
-        <div className="absolute -top-10 -right-10 opacity-50 hidden md:block animate-spin-slow"><GeometricBurst size={100} /></div>
+      <div className="absolute -top- 0.000005 -right-70 opacity-50 hidden md:block animate-spin-slow"><GeometricBurst size={500} /></div>
         <InteractiveCard title="OBJECTIVE.EXE">
            <h3 className="text-xl font-bold text-[#2E6DFF] mb-4 border-b-2 border-[#2E6DFF] inline-block uppercase">Current.Objective</h3>
            <p className="text-[#081B3A] leading-relaxed font-mono font-semibold">
@@ -175,6 +176,7 @@ export const Experience = () => (
 
 export const Contact = () => (
   <section id="contact" className="py-20 relative z-10 border-t-4 border-[#081B3A] bg-[#E2E8F0] mt-20">
+    <div className="absolute -right-100 -bottom-1 opacity-70 hidden md:block"><Angel size={1000} /></div>
     <div className="container mx-auto px-6 max-w-4xl relative">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-5xl font-display font-bold uppercase text-[#081B3A] mb-4">Initiate Protocol</h2>
